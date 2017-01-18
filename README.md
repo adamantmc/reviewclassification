@@ -11,3 +11,9 @@ For Lucene, you need to add 2 JAR's:
 
 1. lucene-6.2.1/core/lucene-core-6.2.1.jar
 2. lucene-6.2.1/queryparser/lucene-queryparser-6.2.1.jar
+
+Python Dependencies:
+
+1. BS4 pip install bs4
+2. NTLK pip install nltk
+3. nltk.download() -> Models -> punkt -> Download
