@@ -8,25 +8,6 @@ from nltk.tokenize import word_tokenize
 from nltk import pos_tag
 from os import listdir
 
-'''
-from stop_words import get_stop_words
-from nltk.stem.porter import PorterStemmer
-
-#Stop word list
-en_stop = get_stop_words('en')
-#Porter Stemmer
-p_stemmer = PorterStemmer()
-
-review = "I found this movie to be a big disappointment, especially considering the cast. The characters are not believable, as are the ridiculous circumstances in which they find themselves. The only part of the film I enjoyed was when the most annoying characters finally get killed. The special effects consist mostly of scenes of gory dead or dying bodies. A typical unimaginative slasher flick. It's hard to believe, make that impossible to believe that a reclusive creature that sneaks up on goats in the middle of the night could be captured by a group of clumsy, noisy idiots. Equally impossible to believe is how they knew exactly were to find it, in spite of the fact the creature has evaded capture, or even photographing. The man that pulls off the impossible in capturing the Chupacabra alive is our one dimensional Dr. Pena (Giancarlo Esposito). The only thing Dr. Pena is more obsessed with than the creature is his dart gun. A dart gun that works were mere bullets fail. The captain of the ship (John Rhys-Davies) is introduced as a 'war veteran'. He employs his military prowess by having his men shoot at the creature, regardless of were on the ship they happen to be. The Navy Seals that show up from nowhere repeat the pattern of shooting at everything. Dylan Neal plays an insurance investigator brought on board the cruise ship to catch a thief. He spends most of the movie tagging along with whomever is trying to kill the creature at the moment. The creature doesn't even closely resemble a Chupacabra. It doesn't behave like one either. Instead of a small, shy, secretive animal that hunts by stealth at night, we get a bulletproof Freddy Kruger, killing everything in sight. A simple search on Google would have been very helpful to the writers and the special effects crew."
-
-words = [i for i in tokens if not i in en_stop]
-review_2 = ''.join((w+" ") for w in words)
-
-print(review_1)
-print()
-print(review_2)
-'''
-
 def getTime():
     return str(datetime.datetime.time(datetime.datetime.now()))
 
@@ -111,7 +92,7 @@ sent_dict = getSentimentDictionary("SentiWordNet.txt")
 tlog("Sentiment dictionary read.")
 
 tlog("Reading reviews and removing html elements.")
-reviews = process_set(("data/train/pos", "data/train/neg"), sent_dict)
+reviews = process_set(("data/train/pos", "data/train/neg", "data/test"), sent_dict)
 tlog("Reviews processed.")
 
 tlog("Writing processed files to disk.")
