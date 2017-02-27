@@ -2,6 +2,12 @@
 
 Review classification (positive/negative)
 
+First technique is a search-based one. We search for similar reviews, then add all their scores which are calculated using cosine similarity. If the result is positive, the review is classified as positive and vice versa. Other methods that calculated scores using a sentiment dictionary were slightly worse.
+Accuracy: 84% - 85%
+
+Second technique is a naive Bayes classifier, with the exception that negative probabilities are given a small value so as to not zero out the total probability.
+Accuracy: 78% - 80%
+
 JAVA Dependencies:
 
 1. Lucene: http://www.apache.org/dyn/closer.lua/lucene/java/6.4.1
